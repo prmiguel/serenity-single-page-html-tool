@@ -2,12 +2,12 @@ image: gitpod/workspace-full
 tasks:
   - name: Define Java and Mven
     before: |
-      sdk install java 11.0.20.1-zulu -y
-      sdk install maven 3.9.4 -y
+      sdkman_auto_answer=true sdk install java 11.0.20.1-zulu -y
+      sdkman_auto_answer=true sdk install maven 3.9.4 -y
       java -version
       mvn --version
     command: |
-      mvn dependency:resolve
+      mvn package
   
 vscode:
   extensions:
