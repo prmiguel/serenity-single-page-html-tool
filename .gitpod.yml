@@ -1,5 +1,14 @@
 image: gitpod/workspace-java-11
-
+tasks:
+  - name: Define Java
+    before: |
+      sdk install java 11.0.20.1-zulu -y
+      java -version
+  - name: Define Maven
+    before: |
+      sdk install maven 3.9.4 -y
+      mvn --version
+  
 vscode:
   extensions:
     - vscjava.vscode-java-pack
