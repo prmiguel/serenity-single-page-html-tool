@@ -19,13 +19,16 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
+    - name: Generate JAR
       run: mvn -B package --file pom.xml
-    - uses: actions/upload-artifact@v3
+    - name: Rename JAR
+      run: cp tarjet/serenity-single-page-report-tool-*-jar-with-dependencies.jar tarjet/serenity-single-page-report-tool.jar
+    - name: Upload JAR
+      uses: actions/upload-artifact@v3
       with:
         name: JAR package
         path: |
-          target/*.jar
+          tarjet/serenity-single-page-report-tool.jar
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     #- name: Update dependency graph
