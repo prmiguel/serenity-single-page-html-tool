@@ -15,7 +15,7 @@ java -jar serenity-single-page-html-tool.jar <input-directory> <output-directory
 
 ### Examples
 ```sh
-java -jar serenity-single-page-html-tool.jar examples/serenity-js-mocha-webdriverio-input/ examples/serenity-js-mocha-webdriverio-output/
+java -jar serenity-single-page-html-tool.jar examples/serenity-js-mocha-webdriverio-input/target/site/serenity/ examples/serenity-js-mocha-webdriverio-output/
 ```
 
 ## References
