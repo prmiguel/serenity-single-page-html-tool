@@ -1,6 +1,6 @@
 image: gitpod/workspace-full
 tasks:
-  - name: Define Java and Mven
+  - name: Define Java and Maven
     before: |
       y | sdk install java 11.0.20.1-zulu -y || true
       y | sdk install maven 3.9.4 -y || true
